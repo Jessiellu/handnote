@@ -1,0 +1,99 @@
+/* page/handList/index.wxss */
+.todo-title {
+  background-color: white;
+  color: #222222;
+  font-size: large;
+  font-weight: 600;
+  padding-left: 20rpx;
+  height: 70rpx;
+}
+.add-suspension-btn__task {
+  position: fixed;
+  width: 100%;
+  left: 80%;
+  top: 85%;
+  z-index: 3;
+}
+.task-check__tips {
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  color: #888888;
+  background-color: white;
+  vertical-align: middle;
+}
+.imgs {
+  align-items: center;
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx;
+}
+.imgs image {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+}
+.task-check__lists {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.task-check__lists--items {
+  background-color: white;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  line-height: 30px;
+  margin: 20rpx 10rpx;
+  height: auto;
+  padding: 20rpx 30rpx;
+}
+.item-content {
+  width: 70%;
+}
+.item-title {
+  word-wrap: break-word;
+}
+.item-right {
+  text-align: right;
+  width: 100px;
+}
+.item-desc,
+.item-count {
+  color: var(--weui-FG-1);
+  font-size: 14px;
+}
+.item-date {
+  color: var(--weui-FG-1);
+  font-size: 11px;
+}
+.item-count {
+  text-align: center;
+}
+.item-check {
+  background-color: var(--weui-theme);
+  border-radius: 50rpx;
+  color: white;
+  /* margin: 0 30rpx; */
+  text-align: center;
+}
+.item-check__on {
+  background-color: #888888;
+  border-radius: 50rpx;
+  color: white;
+  font-size: 13px;
+  /* margin: 0 30rpx; */
+  text-align: center;
+}
+.task-check__list--title {
+  margin-top: 20rpx;
+  margin-bottom: 15rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  color: var(--weui-FG-1);
+  font-size: 14px;
+  line-height: 1.4;
+}

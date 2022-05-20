@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3259149 */
+  src: url('//at.alicdn.com/t/font_3259149_jqpy9u34k9q.woff2?t=1652113581446') format('woff2'),
+       url('//at.alicdn.com/t/font_3259149_jqpy9u34k9q.woff?t=1652113581446') format('woff'),
+       url('//at.alicdn.com/t/font_3259149_jqpy9u34k9q.ttf?t=1652113581446') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e601";
+}
+
+.icon-xinfengyoujian:before {
+  content: "\e6eb";
+}
+
+.icon-bianji:before {
+  content: "\e701";
+}
+
+.icon-fenxiang1:before {
+  content: "\e725";
+}
+
+.icon-pifu:before {
+  content: "\e743";
+}
+
+.icon-caozuo-shangchuan-download:before {
+  content: "\e713";
+}
+
+.icon-caozuo-shangchuan-upload:before {
+  content: "\e714";
+}
+
+.icon-fuhao-tongzhi:before {
+  content: "\e729";
+}
+
+.icon-fuhao-zhuangtai-tishi:before {
+  content: "\e731";
+}
+
+.icon-shezhi:before {
+  content: "\e750";
+}
+
+.icon-shanchu:before {
+  content: "\e61e";
+}
+
+.icon-gengduo:before {
+  content: "\e624";
+}

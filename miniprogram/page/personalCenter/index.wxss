@@ -1,0 +1,35 @@
+/* page/personalCenter/index.wxss */
+@import "../../iconfont.wxss";
+
+.personal-header {
+  background-color: white;
+  display: flex;
+}
+.personal-header-portrait {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 100%;
+  margin: 20rpx;
+  overflow: hidden;
+}
+.personal-header-portrait image {
+  width: 150rpx;
+  height: 150rpx;
+  padding: 0;
+  margin: 0;
+}
+.personal-header-name {
+  font-size: 64rpx;
+  margin: 20rpx;
+  align-self: center;
+}
+/**/
+.iconfont {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 16px;
+  vertical-align: middle;
+}

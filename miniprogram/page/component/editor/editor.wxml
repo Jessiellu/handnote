@@ -1,0 +1,29 @@
+<view class="container"  style="height:{{editorHeight}}px;">
+  <editor
+    id="editor"
+    class="ql-container"
+    placeholder="{{placeholder}}"
+    bindinput="getEditorValue"
+    bindstatuschange="onStatusChange"
+    bindready="onEditorReady"
+    value="{{articleContent}}">
+  </editor>
+</view>
+<view class="toolbar" catchtouchend="format" style="bottom: {{isIOS ? keyboardHeight : 0}}px">
+  <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+    <i class="iconfont icon-tupian" catchtouchend="insertImage"></i>
+    <i class="iconfont icon-heading-h1 {{formats.header === 1 ? 'ql-active' : ''}}" data-name="header" data-value="{{1}}"></i>
+    <i class="iconfont icon-heading-h2 {{formats.header === 2 ? 'ql-active' : ''}}" data-name="header" data-value="{{2}}"></i>
+    <i class="iconfont icon-heading-h3 {{formats.header === 3 ? 'ql-active' : ''}}" data-name="header" data-value="{{3}}"></i>
+    <i class="iconfont icon-bold {{formats.bold ? 'ql-active' : ''}}" data-name="bold"></i>
+    <i class="iconfont icon-italic {{formats.italic ? 'ql-active' : ''}}" data-name="italic"></i>
+    <i class="iconfont icon-underline {{formats.underline ? 'ql-active' : ''}}" data-name="underline"></i>
+    <i class="iconfont icon-text-align-left {{formats.align === 'left' ? 'ql-active' : ''}}"data-name="align" data-value="left"></i>
+    <i class="iconfont icon-text-align-center {{formats.align === 'center' ? 'ql-active' : ''}}"data-name="align" data-value="center"></i>
+    <i class="iconfont icon-text-align-right {{formats.align === 'right' ? 'ql-active' : ''}}"data-name="align" data-value="right"></i>
+    <i class="iconfont icon-list-checked" data-name="list" data-value="check"></i>
+    <i class="iconfont icon-list-order {{formats.list === 'ordered' ? 'ql-active' : ''}}" data-name="list" data-value="ordered"></i>
+    <i class="iconfont icon-list-disorder {{formats.list === 'bullet' ? 'ql-active' : ''}}" data-name="list" data-value="bullet"></i>
+    <i class="iconfont icon-29date" catchtouchend="insertDate"></i>
+  </scroll-view>
+</view>

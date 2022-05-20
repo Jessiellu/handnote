@@ -1,0 +1,49 @@
+<!--page/createTask/index.wxml-->
+<view class="create-task-page">
+  <view class="create-task">
+    <view class="create-task__tips">选择创建一个目标</view>
+    <view class="create-task__list">
+      <view class="task-list__custom" bindtap="onclickCustom">
+        <view class="task-icon">
+          <i class="iconfont icon-add"></i>
+        </view>
+        <view class="task-title">自定义</view>
+      </view>
+      <view class="task-list__template" wx:for="{{template}}" wx:key="id">
+        <view class="list-template" data-index="{{index}}" bindtap="onclickTemplate" style="background-color: {{item.background}};">
+          <view class="task-icon">
+            <image src="{{item.icon}}"></image>
+          </view>
+          <view class="task-title">{{item.title}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="create-dialog">
+    <ui-dialog show="{{customDialogShow}}" title="自定义" bindconfirm="confirm">
+      <mp-cells class="dialog-cell__title">
+        <text class="important-icon">*</text>
+        <mp-cell title="目标："><input class="dialog-input" name="title" type="text" bindinput="getTitle"/></mp-cell>
+      </mp-cells>
+      <mp-cells class="dialog-cell__days">
+        <text class="important-icon">*</text>
+        <mp-cell title="打卡天数：">
+          <input class="dialog-input input-day" name="days" type="number" bindinput="getDays"/>
+          <text class="dialog-cell__unit">天</text>
+        </mp-cell>
+      </mp-cells>
+    </ui-dialog>
+    <ui-dialog title="{{dialogTitle}}" show="{{dialogShow}}" bindconfirm="confirm">
+      <mp-cells>
+        <mp-cell title="图标：" class="dialog-icon"><image src="{{dialogIcon}}"></image></mp-cell>
+      </mp-cells>
+      <mp-cells class="dialog-cell__days">
+        <text class="important-icon">*</text>
+        <mp-cell title="打卡天数：">
+          <input class="dialog-input input-day" name="days" type="number" bindinput="getDays"/>
+          <text class="dialog-cell__unit">天</text>
+        </mp-cell>
+      </mp-cells>
+    </ui-dialog>
+  </view>
+</view>

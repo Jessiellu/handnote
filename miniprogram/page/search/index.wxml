@@ -1,0 +1,30 @@
+<!--page/search/index.wxml-->
+<view class="search-container">
+  <view class="search-bar">
+    <view class="search-bar__form">
+      <!-- 搜索框 -->
+      <view class="search-bar__box">
+        <icon class="search-bar__icon icon-small" type="search" size="17"></icon>
+        <input type="text" class="search-bar__input" placeholder="请输入搜索内容" value="{{inputValue}}" focus="{{focus}}" bindinput="inputTyping"/>
+        <icon class="icon-small" type="clear" size="17" wx:if="{{inputValue.length > 0}}" bindtap="clearInput"></icon>
+      </view>
+    </view>
+    <!-- 取消搜索 -->
+    <view class="search-bar__cancel-btn" bindtap="hideInput">取消</view>
+  </view>
+  <view class="search-content">
+    <view class="search-result">搜索结果为{{noteResult.length + fileResult.length}}条</view>
+    <mp-cells title="笔记" wx:if="{{noteResult.length > 0}}">
+      <mp-cell bindtap="openNote" body-class="weui-cell_primary" data-index="{{index}}" wx:for="{{noteResult}}" wx:key="index" hover>
+        <view class="item-title">{{item.hn_notes_title}}</view>
+        <view class="item-desc">{{item.hn_create_date}}</view>
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="文件" wx:if="{{fileResult.length > 0}}">
+      <mp-cell bindtap="openFile" body-class="weui-cell_primary" data-index="{{index}}" wx:for="{{fileResult}}" wx:key="index" hover>
+        <view class="item-title">{{item.hn_files_title}}</view>
+        <view class="item-desc">{{item.hn_create_date}}</view>
+      </mp-cell>
+    </mp-cells>
+  </view>
+</view>

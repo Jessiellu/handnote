@@ -1,0 +1,75 @@
+/* page/createTask/index.wxss */
+@import "../../iconfont.wxss";
+/*global*/
+.iconfont {
+  font-size: 20px;
+  text-align: center;
+}
+.important-icon {
+  color: var(--weui-RED);
+  margin: 16px 0;
+}
+
+.create-task__tips {
+  margin: 20rpx;
+}
+.create-task__list {
+  /* background-color: white; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* height: calc(100% - 25px - 40rpx); */
+  padding: 50rpx;
+}
+.task-list__custom,
+.task-list__template {
+  /* height: 200rpx; */
+  /* width: 200rpx; */
+  margin: 0 20rpx;
+  margin-bottom: 50rpx;
+  text-align: center;
+}
+.task-list__custom {
+  background-color: var(--weui-BG-1);
+  border: 5px dashed var(--weui-theme);
+  border-radius: 10px;
+  height: 300rpx;
+  /* line-height: 200rpx; */
+}
+.list-template {
+  border-radius: 10px;
+  color: white;
+  height: 325rpx;
+}
+.weui-cells_after-title,
+.weui-cell__bd {
+  display: flex;
+}
+.task-list__custom .task-icon {
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+}
+.list-template .task-icon image {
+  width: 48px;
+  height: 48px;
+  margin-top: 50rpx;
+}
+.dialog-icon image {
+  width: 48px;
+  height: 48px;
+}
+.dialog-input {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 0 20rpx;
+}
+.input-day{
+  width: 160rpx;
+}
+.dialog-cell__title,
+.dialog-cell__days {
+  display: flex;
+  text-align: left;
+}
+.dialog-cell__unit {
+  margin-left: 16rpx;
+}

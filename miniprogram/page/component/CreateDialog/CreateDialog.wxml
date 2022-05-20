@@ -1,0 +1,18 @@
+<!--page/component/CreateDialog.wxml-->
+<view hidden="{{!show}}">
+    <view class="ui-mask" bindtap="close"></view><!-- 遮罩层 -->
+    <view class="ui-dialog__wrp" bindtap="close">
+      <view catchtap="stopEvent" class="ui-dialog">
+        <view class="ui-dialog__hd">
+          <view class="ui-dialog__title">{{title}}</view>
+        </view>
+        <view class="ui-dialog__bd">
+          <slot/>
+        </view>
+        <view class="ui-dialog__ft">
+          <view class="ui-dialog__btn ui-dialog__btn_default" bindtap="close" data-index="0" hover-class="ui-active">{{canelText}}</view>
+          <view class="ui-dialog__btn ui-dialog__btn_primary" bindtap="confirmButtonTap" data-index="1" hover-class="ui-active">{{confirmText}}</view>
+        </view>
+      </view>
+    </view>
+</view>

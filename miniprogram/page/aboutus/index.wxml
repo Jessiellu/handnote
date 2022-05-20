@@ -1,0 +1,33 @@
+<!--page/aboutus/index.wxml-->
+<view class="about-us">
+  <view class="about-us-logo">
+      <image src="../../image/logo.png"></image>
+  </view>
+  <view class="about-us-title layout-center">
+    <strong>Handnote 笔记</strong>
+  </view>
+  <view class="about-us-container">
+    <view class="introduce">
+      随时随地记录，保存笔记到云端，不怕丢失，选择Handnote笔记，学习之余还能做目标打卡。
+    </view>
+    <view class="detail">
+      <view class="detail-title">关于：</view>
+      <view class="about-list">
+        <view><strong>开发版本：</strong>1.0.0</view>
+        <view><strong>开发者：</strong>刘嘉欣（Jessie）</view>
+        <view><strong>开发日期：</strong>2022-05-20</view>
+      </view>
+    </view>
+    <view class="detail">
+      <view class="detail-title">开发者自述：</view>
+      <view class="introduce">
+        我现在是一名大四的在校生^_^,目前就读于嘉应学院计算机科学与技术专业,
+        这是我做的第一个小程序,也是作为毕业设计的项目，如果喜欢或者想有了解关于这个小程序的技术可以关注和联系我哦。
+      </view>
+      <view class="about-list">
+        <view><strong>GitHub：</strong>Jessiellu</view>
+        <view><strong>邮箱：</strong>jessiellu20.163.com</view>
+      </view>
+    </view>
+  </view>
+</view>

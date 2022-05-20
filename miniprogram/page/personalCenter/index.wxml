@@ -1,0 +1,33 @@
+<!--page/personalCenter/index.wxml--> 
+<view class="page-personal"> 
+  <view class="personal-header"> 
+    <!-- <block wx:if="{{!hasUserInfo}}"> 
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button> 
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> 
+    </block> --> 
+    <!-- <block wx:else> --> 
+      <view class="personal-header-portrait"> 
+        <image bindtap="onViewTap" class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image> 
+      </view> 
+      <view class="personal-header-name"> 
+        <text bindtap="onViewTap" class="userinfo-nickname">{{nickName}}</text> 
+      </view> 
+    <!-- </block> --> 
+  </view> 
+  <view> 
+    <mp-cells class="personal-list"> 
+      <mp-cell link url="../notice/index" value="通知"> 
+        <image slot="icon" class="iconfont icon-fuhao-tongzhi"></image> 
+      </mp-cell> 
+      <mp-cell link url="../setting/index" value="设置"> 
+        <image slot="icon" class="iconfont icon-shezhi"></image> 
+      </mp-cell> 
+      <mp-cell link url="../feedback/index" value="反馈"> 
+        <image slot="icon" class="iconfont icon-xinfengyoujian"></image> 
+      </mp-cell> 
+      <mp-cell link url="../aboutus/index" value="关于"> 
+        <image slot="icon"  class="iconfont icon-fuhao-zhuangtai-tishi"></image> 
+      </mp-cell> 
+    </mp-cells> 
+  </view> 
+</view> 

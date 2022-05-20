@@ -1,0 +1,6 @@
+<view class="search-bar">
+  <navigator class="search-bar__navigator" url="../../page/search/index" open-type="navigate">
+    <icon class="icon-small" type="search" size="23"></icon>
+    <input type="text" class="search-bar__input" placeholder="搜索"/>
+  </navigator>
+</view>

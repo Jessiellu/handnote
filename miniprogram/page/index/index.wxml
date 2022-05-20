@@ -1,0 +1,5 @@
+<!--page/index/index.wxml-->
+<view class="page-container">
+  <!-- 搜索框 -->
+  <SearchInput></SearchInput>
+</view>

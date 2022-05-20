@@ -1,0 +1,67 @@
+<!--page/handNote/index.wxml-->
+<view class="handnote-container">
+  <!-- 搜索框 -->
+  <SearchInput class="handnote-search-bar"></SearchInput>
+  <!-- top-bar -->
+  <TopBar class="handnote-top-bar" tabs="{{tabs}}" binditemChange="handleItemChange">
+    <view class="handnote-content" wx:if="{{tabs[0].isActive}}">
+      <view class="handnote-add-suspension-btn">
+        <!-- 悬浮添加按钮 -->
+        <AddBallButton class="add-suspension-btn__note" bindClickButton="bindClickBtnNote" addurl="../../page/addNote/index"></AddBallButton>
+      </view>
+      <view class="handnote-content__show">
+        <view class="handnote-notes__content" wx:if="{{noteList.length === 0}}">还没有笔记，点击添加</view>
+        <view class="handnote-notes__list--items" wx:elif="{{noteList.length > 0}}">
+          <view class="note-list__item {{item.isTouchMove ? 'touch-move-active' : ''}}"
+            wx:for="{{noteList}}" wx:key="index">
+            <view class="note-list__item--left" data-index="{{index}}" bindtouchstart="touchStart" bindtouchmove="touchMove">
+              <view class="note-list__item--context"  bindtap="openNote">
+                <view class="item-title">{{item.hn_notes_title}}</view>
+                <view class="item-desc">
+                  <view class="item-createdate">{{item.hn_create_date}}</view>
+                </view>
+              </view>
+              <view class="item-download--btn" data-index="{{index}}" data-type="{{isNew}}" data-id="{{}}" bindtap="editNote">
+                  <i class="iconfont icon-bianji"></i>编辑
+              </view>
+            </view>
+            <view class="item-delete--btn" data-index="{{index}}" bindtap="deleteNote">删除</view>
+        </view>
+      </view>
+      </view>
+    </view>
+    <view class="handnote-content" wx:if="{{tabs[1].isActive}}">
+      <view class="handnote-file__upload--btn" bindtap="uploadFile" data-type="file">
+        <i class="iconfont icon-caozuo-shangchuan-upload"></i>
+        <text class="handnote-content__tips">点击上传文件</text>
+      </view>
+      <!-- 文件列表 -->
+      <view class="handnote-file__list--title">
+        <text>请不要一次上传超过1M的文件</text>
+      </view>
+      <view class="handnote-file__list--items">
+        <view
+          class="file-list__item {{item.isTouchMove ? 'touch-move-active' : ''}}"
+          wx:for="{{fileList}}"
+          wx:key="index"
+          >
+          <view class="file-list__item--left" data-index="{{index}}" bindtouchstart="touchStart" bindtouchmove="touchMove">
+            <view class="imgs" data-index="index">
+              <image data-index="{{index}}" src="{{iconSrc[index]}}"></image>
+            </view>
+            <view class="file-list__item--context" data-index="{{index}}" bindtap="openFile">
+              <view class="item-title">{{item.hn_files_title}}</view>
+              <view class="item-desc">
+                <view class="item-createdate">{{item.hn_create_date}}</view>
+              </view>
+            </view>
+            <view class="item-download--btn" data-index="{{index}}" bindtap="downloadFile">
+              <i class="iconfont icon-caozuo-shangchuan-download"></i>下载
+            </view>
+          </view>
+          <view class="item-delete--btn" data-index="{{index}}" bindtap="deleteBtn">删除</view>
+        </view>
+      </view>
+    </view>
+  </TopBar>
+</view>

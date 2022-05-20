@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "创建目标",
+  "usingComponents": {
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+    "ui-dialog": "../component/CreateDialog/CreateDialog"
+  }
+}

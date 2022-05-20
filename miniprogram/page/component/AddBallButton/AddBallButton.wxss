@@ -1,0 +1,19 @@
+/* page/component/AddBall/AddBall.wxss */
+.add-suspension-btn {
+  background-color: var(--weui-theme);
+  border-radius: 100%;
+  display: flex;
+  position: fixed;
+  height: 100rpx;
+  width: 100rpx;
+  margin: 20rpx;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 10px #D8D8D8;
+  z-index: 1;
+  cursor: pointer;
+}
+.add-suspension-icon {
+  position: absolute;
+  transform: translateX(-3%) translateY(-4%);
+}

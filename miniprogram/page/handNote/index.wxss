@@ -1,0 +1,137 @@
+/* page/handNote/index.wxss */
+@import "../../iconfont.wxss";
+
+/* handnote-files */
+.handnote-notes__content,
+.handnote-file__upload--btn {
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  color: #888888;
+  background-color: white;
+  vertical-align: middle;
+}
+.handnote-content__tips {
+  margin-left: 10rpx;
+}
+.handnote-add-suspension-btn {
+  position: fixed;
+  width: 100%;
+  left: 80%;
+  top: 85%;
+  z-index: 3;
+}
+.iconfont {
+  font-size: 20px;
+  text-align: center;
+}
+
+.handnote-file__list--title {
+  margin-top: 20rpx;
+  margin-bottom: 15rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  color: var(--weui-FG-1);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.handnote-notes__list--items {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.handnote-file__list--items {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.note-list__item,
+.file-list__item {
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 15rpx;
+  /* padding: 20rpx 10rpx; */
+  padding-right: 0;
+  height: auto;
+  width: 100%;
+}
+.imgs {
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgs image {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+}
+.note-list__item--left,
+.file-list__item--left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  margin-left: -150rpx;
+  padding: 20rpx 10rpx;
+  transform: translateX(150rpx);
+  /* -webkit-transition: all 0.4s; */
+  transition: all 0.4s;
+  /* -webkit-transform: translateX(150rpx); */
+}
+.note-list__item--context {
+  width: 75%;
+  border-right: 1px solid #cccccc;
+  display: -webkit-box;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding-right: 5rpx;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+}
+.file-list__item--context {
+  border-right: 1px solid #cccccc;
+  display: -webkit-box;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding-right: 5rpx;
+  width: 59%;
+  /* overflow: hidden; */
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+}
+.item-desc {
+  color: var(--weui-FG-1);
+  font-size: 34rpx;
+}
+/*下载按钮*/
+.item-download--btn {
+  color: #888888;
+  font-size: 16px;
+  margin-right: 18rpx;
+  vertical-align: middle;
+}
+/* 删除按钮 */
+.item-delete--btn {
+  /* height: 100%; */
+  width: 140rpx;
+  background-color: var(--weui-RED);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  color: white;
+  transform: translateX(150rpx);
+  /* -webkit-transition: all 0.4s; */
+  transition: all 0.4s;
+  /* -webkit-transform: translateX(150rpx); */
+}
+.touch-move-active .note-list__item--left,
+.touch-move-active .file-list__item--left,
+.touch-move-active .item-delete--btn {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}

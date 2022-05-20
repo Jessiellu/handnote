@@ -1,0 +1,4 @@
+<!--page/component/AddBall/AddBall.wxml-->
+<navigator class="add-suspension-btn" url="{{addurl}}" open-type="navigate">
+  <mp-icon class="add-suspension-icon" type="field" icon="add" color="white" size="25"></mp-icon>
+</navigator>

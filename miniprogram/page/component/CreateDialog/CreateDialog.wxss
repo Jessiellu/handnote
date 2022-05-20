@@ -1,0 +1,109 @@
+/* page/component/CreateDialog.wxss */
+.ui-mask {
+  background: rgba(0, 0, 0, .6);
+}
+.ui-mask,
+.ui-mask_transparent {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.ui-dialog {
+  position: fixed;
+  z-index: 5000;
+  top: 50%;
+  left: 16px;
+  right: 16px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: var(--weui-BG-2);
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  max-height: 90%;
+}
+.ui-dialog__hd {
+  padding: 32px 24px 16px;
+}
+.ui-dialog__title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.4;
+}
+.ui-dialog__bd {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 24px;
+  margin-bottom: 32px;
+  font-size: 17px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  color: var(--weui-FG-1);
+}
+.ui-dialog__bd:first-child,
+.ui-dialog__ft {
+  display: flex;
+}
+.ui-dialog__ft {
+  position: relative;
+  line-height: 56px;
+  min-height: 56px;
+  font-size: 17px;
+}
+.ui-dialog__ft:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #D5D5D6;
+  color: #D5D5D6;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.ui-dialog__btn {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  color: var(--weui-LINK);
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+}
+.ui-dialog__btn:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid #D5D5D6;
+  color: #D5D5D6;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+.ui-dialog__btn:active {
+  background-color: var(--weui-BG-COLOR-ACTIVE);
+}
+.ui-dialog__btn_default {
+  color: var(--weui-FG-HALF);
+}

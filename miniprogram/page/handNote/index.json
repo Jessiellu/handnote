@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "AddBallButton": "../../page/component/AddBallButton/AddBallButton",
+    "SearchInput": "../../page/component/SearchInput/SearchInput",
+    "TopBar": "../../page/component/TopBar/TopBar",
+    "mp-icon": "weui-miniprogram/icon/icon",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-slideview": "weui-miniprogram/slideview/slideview"
+  }
+}

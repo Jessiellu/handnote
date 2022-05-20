@@ -1,0 +1,4 @@
+<!--page/feedback/index.wxml-->
+<view class="feedback">
+  <button class="feedback-btn" open-type="feedback">反馈与建议</button>
+</view>

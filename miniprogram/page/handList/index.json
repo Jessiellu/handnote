@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "打卡",
+  "usingComponents": {
+    "AddBallButton": "../../page/component/AddBallButton/AddBallButton",
+    "TopBar": "../../page/component/TopBar/TopBar"
+  }
+}

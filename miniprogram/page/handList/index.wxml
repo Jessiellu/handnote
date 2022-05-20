@@ -1,0 +1,59 @@
+<!--page/handList/index.wxml-->
+<view class="handnote-list">
+  <view class="todo-title">目标挑战，督促进步</view>
+  <!-- top-bar -->
+  <TopBar class="handnote-top-bar" tabs="{{tabs}}" binditemChange="handleItemChange">
+    <view class="handnote-content" wx:if="{{tabs[0].isActive}}">
+      <view class="handnote-add-suspension-btn">
+        <!-- 悬浮添加按钮 -->
+        <AddBallButton class="add-suspension-btn__task" bindClickButton="bindClickBtnNote" addurl="../../page/createTask/index"></AddBallButton>
+      </view>
+      <view class="task-check__list">
+        <view class="task-check__tips" wx:if="{{checkList.length === 0}}">点击下方按钮添加任务吧</view>
+        <view class="task-check__show" wx:elif="{{checkList.length > 0}}">
+          <view class="task-check__lists" wx:for="{{checkList}}" wx:key="index">
+            <view class="task-check__lists--items" data-index="{{index}}" wx:if="{{item.hn_check_days - item.hn_check_count != 0}}">
+              <view class="imgs" data-index="index">
+                <image data-index="{{index}}" src="{{iconSrc[index]}}"></image>
+              </view>
+              <view class="item-content">
+                <view class="item-title">{{item.hn_check_title}}</view>
+                <view class="item-desc">剩余{{item.hn_check_days - item.hn_check_count}}天</view>
+              </view>
+              <view class="item-right">
+                <view class="item-count">坚持打卡{{item.hn_check_count}}天</view>
+                <view class="item-check__on" wx:if="{{item.hn_check_on}}">今日已打卡</view>
+                <view class="item-check" wx:else="{{item.hn_check_on === false}}" data-index="{{index}}" bindtap="onCheck">打卡</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="handnote-content" wx:if="{{tabs[1].isActive}}">
+      <view class="task-check__list">
+        <view class="task-check__list--title">
+          <text>达成成就</text>
+        </view>
+        <view class="task-check__show">
+          <view class="task-check__lists" wx:for="{{checkList}}" wx:key="index">
+            <view class="task-check__lists--items" wx:if="{{item.hn_check_days - item.hn_check_count === 0}}">
+              <view class="imgs" data-index="index">
+                <image data-index="{{index}}" src="{{iconSrc[index]}}"></image>
+              </view>
+              <view class="item-content">
+                <view class="item-title">{{item.hn_check_title}}</view>
+                <view class="item-date">{{item.hn_check_startdate}} 至 {{item.hn_check_enddate}}</view>
+              </view>
+              <view class="item-right">
+                <view class="item-count">坚持打卡{{item.hn_check_count}}天</view>
+                <view class="item-check">已完成</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </TopBar>
+</view>
+

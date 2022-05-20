@@ -1,0 +1,8 @@
+<!--page/component/card/card.wxml-->
+<view class="card-list" bindtap="onTabNode" data-id="{{id}}">
+  <image class='card-image' src="{{imagesList}}"></image>
+  <h3 class="title">{{cardtitle}}</h3>
+  <view class='card-describe'>
+    <view class='m-bottom'>坚持打卡{{days}}天</view>
+  </view>
+</view>
